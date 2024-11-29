@@ -1,0 +1,127 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+.one{
+    width: 100vw;
+    height: 80px;
+    background: #58bbf4;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+     margin-top: 0;
+    margin-left: 0; 
+}
+
+img{
+    margin-right: 150px;
+}
+nav{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+
+nav a{
+    color: white;
+    text-decoration: none;
+}
+
+nav a:hover{
+    color: green;
+}
+
+nav a div{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.seperator{
+    width: 1px;
+    height: 16px;
+    background: white;
+    margin: 0 20px;
+}
+
+.full{
+    width: 100vw;
+    height: 100vh;
+    background: yellow;
+}
+
+.fulll{
+    width: 100vw;
+    height: 100vh;
+    background: blue;
+}
+.three{
+    position: relative;
+    transform-style: preserve-3d;
+    animation: rotate 10s linear infinite;
+}
+@keyframes rotate{
+    from{
+        transform: perspective(1200px) rotateY(0deg);
+    }
+    to{
+        transform: perspective(1200px) rotateX(360px);
+    }
+}
+.three span{
+    position:fixed;
+    width: 100%;
+    height: 100%;
+    transform-origin: center;
+    transform-style: preserve-3d;
+    transform: rotateY(calc(var(--i)*45deg)) translateX(380px);
+}
+
+.hamburger{
+    background-color: transparent;
+    border: none;
+    outline: none;
+    cursor: pointer;
+
+}
+
+.hamburger .line{
+    display: block;
+    width: 40px;
+    height: 3px;
+    background-color: black;
+    margin-block:  10px;
+    border-radius: 4px;
+    transition: transform .5s, opacity .25s;
+}
+
+.hamburger.active .line:nth-child(1){
+    transform:translateY(13px) rotate(45deg) ;
+}
+.hamburger.active .line:nth-child(2){
+    opacity: 0;
+}
+.hamburger.active .line:nth-child(3){
+    transform:translateY(-13px) rotate(-45deg) ;
+}
+
+.bottom{
+    width: 100vw;
+    height: 80px;
+    background: #99b0b0;
+    position: fixed;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    margin-top: 0;
+    margin-left: 0; 
+}
+.bottom img {
+    width: 20px;
+    height: 25px;
+    display:inline;
+    margin-inline: 5px;
+    cursor: pointer;
+}
